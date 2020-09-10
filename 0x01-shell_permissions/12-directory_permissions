@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir ug+r,o-o,u+w,go-w,a+x dir_holberton
+mkdir -m751 dir_holberton
