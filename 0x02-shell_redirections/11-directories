@@ -1,2 +1,2 @@
 #!/bin/bash
-find -lRa
+ls -lRa | rm *d
