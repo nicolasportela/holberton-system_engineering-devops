@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lRa | rm *d
+ls -lRa | ls
