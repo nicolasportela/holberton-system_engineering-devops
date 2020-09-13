@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lr | rm *.js
+find . -name "*.jpg" | rm *"*.js"

@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lRa | ls
+find -da | wc -lda
