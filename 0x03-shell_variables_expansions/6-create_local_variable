@@ -1,2 +1,2 @@
 #!/bin/bash
-export betty:"Holberton"
+BETTY:"Holberton"
