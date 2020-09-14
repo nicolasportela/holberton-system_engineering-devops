@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name | unique -u | sort
+ls -1 | unique -u | sort
