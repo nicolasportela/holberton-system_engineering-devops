@@ -12,5 +12,5 @@ trap "echo 'Y U no love me?!'; exit" SIGINT
 trap "rm /var/run/holbertonscript.pid; exit" SIGQUIT
 while true
 do
-    echo "To infinity and beyond" && sleep 2
+    echo "To infinity and beyond"
 done
