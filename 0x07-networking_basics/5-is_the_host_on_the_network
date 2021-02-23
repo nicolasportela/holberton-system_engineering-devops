@@ -3,11 +3,7 @@
 
 if [ "$#" == "1" ]
     then
-        while(( "$#" ))
-        do
             ping $1 -c 5
-            shift
-        done
 else
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 fi
