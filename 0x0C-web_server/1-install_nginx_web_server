@@ -4,10 +4,11 @@
 # - Nginx should be listening on port 80
 # - When querying Nginx at its root / with a GET request (requesting a page)
 # using curl, it must return a page that contains the string Holberton School
-apt-get update
-apt-get upgrade
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
-service nginx start
-# chown -R "$USER:$USER" /var/www/html/
+apt-get update # sudo would be needed if the checker does not execute the script as root user
+apt-get upgrade # sudo would be needed if the checker does not execute the script as root user
+apt-get -y install nginx # sudo would be needed if the checker does not execute the script as root user
+ufw allow 'Nginx HTTP' # sudo would be needed if the checker does not execute the script as root user
+service nginx start # sudo would be needed if the checker does not execute the script as root user
+# This line should be added if the checker does not execute the script as root user,
+# in order to be able to write in that folder: chown -R "$USER:$USER" /var/www/html/
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
