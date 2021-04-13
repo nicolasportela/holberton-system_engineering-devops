@@ -2,7 +2,16 @@
 # Bash script to install and configure HAproxy
 sudo apt-get -y update
 sudo apt-get install -y haproxy=1.6.\*
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
-sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
-sudo sed -i "$ a\listen webapp 0.0.0.0:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 2103-web-01 34.74.134.187:80 check\n\tserver 2103-web-02 34.74.176.2:80 check" /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+setup="
+frontend firstbalance
+    bind *:80
+	mode http
+	default_backend webservers
+backend webservers
+	balance roundrobin
+	server 2103-web-01 34.74.134.187:80 check
+	server 2103-web-02 34.74.176.2:80 check
+"
+echo "$setup" >> /etc/haproxy/haproxy.cfg
+echo "ENABLED=1" >> /etc/default/haproxy
+service haproxy start
