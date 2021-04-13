@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# script containing commands to automatically configure
+# a new server and add a custom NginX response header
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
+FILE="/etc/nginx/nginx.conf"
+sudo sed -i "16i \\tadd_header X-Served-By $HOSTNAME;" $FILE
+sudo service nginx restart
+sudo service nginx reload
