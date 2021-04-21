@@ -12,4 +12,4 @@ service nginx start # sudo would be needed if the checker does not execute the s
 # This line should be added if the checker does not execute the script as root user,
 # in order to be able to write in that folder: chown -R "$USER:$USER" /var/www/html/
 echo "Holberton School" > /var/www/html/index.nginx-debian.html # It could be replaced by the following line 
-# in order to be able to write and save the previous one: echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+# in order to be able to write and save the previous one: echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
