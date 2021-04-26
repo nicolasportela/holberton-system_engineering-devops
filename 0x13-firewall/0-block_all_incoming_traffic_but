@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script to setup a few firewall rules
+sudo ufw disable
+sudo ufw default deny incoming
+sudo ufw allow ssh
+sudo ufw allow https
+sudo ufw allow http
+sudo ufw enable
