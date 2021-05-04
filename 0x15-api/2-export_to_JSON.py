@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script that for a given employee ID, returns his/her TODO list progress"""
+"""Script to export data in the JSON format according to requirements"""
 
 if __name__ == "__main__":
     import json
