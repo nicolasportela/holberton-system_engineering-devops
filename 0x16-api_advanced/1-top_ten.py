@@ -13,8 +13,8 @@ def top_ten(subreddit):
                      allow_redirects=False,
                      headers=header)
     if r.status_code != 200:
-        print (None)
+        print(None)
     else:
         dic = r.json()
         for items in dic.get('data').get('children'):
-            print (items['data']['title'])
+            print(items['data']['title'])
